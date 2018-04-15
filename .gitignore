@@ -1,0 +1,12 @@
+*
+.*
+
+!.gitignore
+!.tmux.conf
+!.vimrc
+!.zshrc
+!README.md
+
+!.oka/
+!.oka/**/*
+!.oka/**/.*
