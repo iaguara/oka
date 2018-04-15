@@ -6,6 +6,7 @@ endtry
 
 """""""""""""""""""
 " Let/Set
+"""""""""""""""""""
 " leader
 let g:mapleader = ','
 
@@ -53,8 +54,33 @@ set pastetoggle=<F2>
 " Highlight column
 let &colorcolumn='81'
 
+" Keyboard
+set ttyfast
+set timeout timeoutlen=1000 ttimeoutlen=50
+
+" Dont redraw when macro is run
+set lazyredraw
+
+" Status 2 lines
+set laststatus=2
+set cmdheight=2
+
+" No bells
+set novisualbell
+set noerrorbells
+
+" show command in the last line
+set showcmd
+
+" Disable mode lines
+set nomodeline
+
+" No cursor line
+set nocursorline
+
 """""""""""""""""""
 " Maps
+"""""""""""""""""""
 " Fast saving
 nmap <leader>w :w!<cr>
 
@@ -84,11 +110,13 @@ map <leader>p :cp<cr>
 
 """""""""""""""""""
 " Files conf
+"""""""""""""""""""
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
 """""""""""""""""""
 " Theme
-colo jellybeans
-hi ColorColumn ctermbg=gray ctermfg=black
-hi NonText ctermfg=8
-hi SpecialKey ctermfg=8
+"""""""""""""""""""
+colorscheme duoduo
+highlight ColorColumn ctermbg=gray ctermfg=black
+highlight NonText ctermfg=8
+highlight SpecialKey ctermfg=8

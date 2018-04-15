@@ -6,10 +6,13 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 
 " RSI
-"Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-rsi'
 
 " Vim colors
-Plug 'nanotech/jellybeans.vim'
+"Plug 'nanotech/jellybeans.vim'
+Plug 'Yggdroot/duoduo'
+"Plug 'felipesousa/rupza'
+"Plug 'ajmwagar/vim-deus'
 
 " Devicons
 Plug 'ryanoasis/vim-devicons'
@@ -19,24 +22,24 @@ Plug 'chrisbra/vim-diff-enhanced'
 
 " Airline
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='badwolf'
-let g:airline_powerline_fonts = 0
+"Plug 'vim-airline/vim-airline-themes'
+"let g:airline_theme='badwolf'
+"let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#right_sep = ' '
-let g:airline#extensions#tabline#right_alt_sep = '|'
-let g:airline#extensions#tmuxline#enabled = 1
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_symbols = {}
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.notexists = '∄'
-let g:airline_symbols.whitespace = 'Ξ'
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#right_sep = ' '
+"let g:airline#extensions#tabline#right_alt_sep = '|'
+"let g:airline#extensions#tmuxline#enabled = 1
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_symbols = {}
+"let g:airline_symbols.crypt = '🔒'
+"let g:airline_symbols.linenr = '␊'
+"let g:airline_symbols.branch = '⎇'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.notexists = '∄'
+"let g:airline_symbols.whitespace = 'Ξ'
 
 " Tmux line
 "Plug 'edkolev/tmuxline.vim'
@@ -50,11 +53,23 @@ let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
 " nerdtree
 Plug 'scrooloose/nerdtree'
 map <C-e> :NERDTreeToggle<CR>
-let g:NERDTreeShowHidden=1
+nnoremap <leader>e :NERDTreeFind<CR>
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeShowBookmarks = 1
+let g:NERDTreeChDirMode = 0
+let g:NERDTreeMouseMode = 2
+let g:NERDTreeKeepTreeInNewTab = 1
 "let g:NERDTreeIgnore=['^\.git$']
+
+" nerdtree git
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " nerdcommenter
 Plug 'scrooloose/nerdcommenter'
+let g:NERDSpaceDelims = 1
 
 " numbers.vim
 Plug 'myusuf3/numbers.vim'
@@ -133,7 +148,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 Plug 'airblade/vim-gitgutter'
 
 " Neoformat
-Plug 'sbdchd/neoformat'
+"Plug 'sbdchd/neoformat'
 
 " Deoplete (Asynchronous complete)
 "Plug 'Shougo/deoplete.nvim'
@@ -143,7 +158,15 @@ Plug 'sbdchd/neoformat'
 
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
-let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_enabled = 1
+let g:ale_completion_enabled = 0
+let g:ale_lint_delay = 200
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_filetype_changed = 1
+let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
 
 call plug#end() " END Plugins
