@@ -106,17 +106,17 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'terryma/vim-multiple-cursors'
 " Prevent conflict with neocomplete
 " Called once right before you start selecting multiple cursors
-"function! Multiple_cursors_before()
-"  if exists(':NeoCompleteLock')==2
-"    exe 'NeoCompleteLock'
-"  endif
-"endfunction
+function! Multiple_cursors_before()
+ if exists(':NeoCompleteLock')==2
+   exe 'NeoCompleteLock'
+ endif
+endfunction
 " Called once only when the multiple selection is canceled (default <Esc>)
-"function! Multiple_cursors_after()
-"  if exists(':NeoCompleteUnlock')==2
-"    exe 'NeoCompleteUnlock'
-"  endif
-"endfunction
+function! Multiple_cursors_after()
+ if exists(':NeoCompleteUnlock')==2
+   exe 'NeoCompleteUnlock'
+ endif
+endfunction
 
 " Tmux Conf
 Plug 'tmux-plugins/vim-tmux'
@@ -155,6 +155,11 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'roxma/nvim-yarp'
 "Plug 'roxma/vim-hug-neovim-rpc'
 "let g:deoplete#enable_at_startup = 1
+"let g:deoplete#num_processes = 1
+
+" Neocomplete
+Plug 'Shougo/neocomplete.vim'
+source ~/.oka/vim/neocomplete.vim
 
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
