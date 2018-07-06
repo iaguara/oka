@@ -9,6 +9,7 @@ endtry
 """""""""""""""""""
 " leader
 let g:mapleader = ','
+let g:maplocalleader = '\'
 
 " 256 colors
 set t_Co=256
@@ -82,31 +83,31 @@ set nocursorline
 " Maps
 """""""""""""""""""
 " Fast saving
-nmap <leader>w :w!<cr>
+noremap <leader>w :w!<cr>
 
 " Treat long lines as break lines
-map j gj
-map k gk
+noremap j gj
+noremap k gk
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+noremap <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-h> <C-W>h
+noremap <C-l> <C-W>l
 
 " Useful mappings for managing  buffer
-map <leader>bd :Bdelete<cr>
-map <leader>ba :bufdo Bdelete!<cr>
-map <leader>bw :bufdo w<cr>
-map <leader>bn :bn<cr>
-map <leader>bp :bp<cr>
+noremap <leader>bd :Bdelete<cr>
+noremap <leader>ba :bufdo Bdelete!<cr>
+noremap <leader>bw :bufdo w<cr>
+noremap <leader>bn :bn<cr>
+noremap <leader>bp :bp<cr>
 
 " Go to next/previous result
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
+noremap <leader>n :cn<cr>
+noremap <leader>p :cp<cr>
 
 """""""""""""""""""
 " Files conf

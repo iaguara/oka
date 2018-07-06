@@ -77,6 +77,9 @@ let g:NERDSpaceDelims = 1
 " numbers.vim
 Plug 'myusuf3/numbers.vim'
 
+" vader.vim
+Plug 'junegunn/vader.vim'
+
 " vim-markdown
 Plug 'tpope/vim-markdown'
 
@@ -165,7 +168,8 @@ Plug 'Shougo/neocomplete.vim'
 source ~/.oka/vim/neocomplete.vim
 
 " Asynchronous Lint Engine
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
+Plug 'fiuzagr/ale', { 'branch': 'sonarjs' }
 let g:ale_enabled = 1
 let g:ale_completion_enabled = 0
 let g:ale_lint_delay = 200
