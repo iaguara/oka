@@ -1,4 +1,4 @@
-export IAGUARA_HOME=${IAGUARA_HOME:-/iaguara}
+export IA_HOME=${IA_HOME:-/iaguara}
 export OKA_DIR=$HOME/.oka
 
 export ZSH=$HOME/.oh-my-zsh
@@ -11,4 +11,4 @@ plugins=(git vi-mode docker)
 
 source $ZSH/oh-my-zsh.sh
 
-[ -s "$IAGUARA_HOME/iaguara.sh" ] && \. $IAGUARA_HOME/iaguara.sh
+[ -s "$IA_HOME/iaguara.sh" ] && \. $IA_HOME/iaguara.sh

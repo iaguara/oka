@@ -1,6 +1,6 @@
 #
 # PATH
-# export PATH=$IAGUARA_HOME/bin:$PATH
+# export PATH=$IA_HOME/bin:$PATH
 
 #
 # Editor
