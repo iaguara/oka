@@ -2,6 +2,8 @@
 try
   source ~/.oka/vim/plugins.vim
 catch
+  echom v:exception
+  echom 'Plugins not loaded!'
 endtry
 
 """""""""""""""""""
@@ -117,7 +119,12 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 """""""""""""""""""
 " Theme
 """""""""""""""""""
-colorscheme duoduo
+try
+  colorscheme duoduo
+catch
+  echom v:exception
+  echom 'Colorscheme not loaded!'
+endtry
+
 highlight ColorColumn ctermbg=gray ctermfg=black
-highlight NonText ctermfg=8
 highlight SpecialKey ctermfg=8
