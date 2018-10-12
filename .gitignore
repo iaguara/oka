@@ -1,6 +1,7 @@
 *
 .*
 
+!.asoundrc
 !.gitignore
 !.tmux.conf
 !.vimrc
@@ -10,3 +11,7 @@
 !.oka/
 !.oka/**/*
 !.oka/**/.*
+
+!.config/
+!.config/tizonia/
+!.config/tizonia/tizonia.conf
