@@ -83,6 +83,15 @@ Plug 'junegunn/vader.vim'
 " vim-markdown
 Plug 'tpope/vim-markdown'
 
+" vim-pencil
+Plug 'reedes/vim-pencil'
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd,text
+    \   call pencil#init({'wrap': 'hard', 'textwidth': 79})
+augroup END
+
+
 " Vim Less CSS
 Plug 'groenewege/vim-less'
 
@@ -168,8 +177,8 @@ Plug 'Shougo/neocomplete.vim'
 source ~/.oka/vim/neocomplete.vim
 
 " Asynchronous Lint Engine
-" Plug 'w0rp/ale'
-Plug 'fiuzagr/ale', { 'branch': 'sonarjs' }
+Plug 'w0rp/ale'
+" Plug 'fiuzagr/ale', { 'branch': 'sonarjs' }
 let g:ale_enabled = 1
 let g:ale_completion_enabled = 0
 let g:ale_lint_delay = 200
