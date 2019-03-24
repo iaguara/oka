@@ -2,10 +2,12 @@
 .*
 
 !.asoundrc
+!.bashrc
 !.gitignore
 !.tmux.conf
 !.vimrc
 !.zshrc
+!install.sh
 !README.md
 
 !.oka/
@@ -13,5 +15,6 @@
 !.oka/**/.*
 
 !.config/
-!.config/tizonia/
-!.config/tizonia/tizonia.conf
+!.config/xfce4/
+!.config/xfce4/**/*
+.config/xfce4/desktop
