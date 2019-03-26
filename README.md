@@ -16,10 +16,10 @@ own license, whenever necessary.
 ## Install
 
 ```shell 
-curl -o- https://raw.githubusercontent.com/iaguara/oka/master/install.sh | sh
+curl -o- https://git.io/fjUqe | sh
 ```
 
 _See [install.sh][install] to more details._
 
 [iaguara]: https://github.com/iaguara
-[install]: ./install.sh
+[install]: ./.oka/scripts/install.sh

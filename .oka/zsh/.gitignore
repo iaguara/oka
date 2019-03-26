@@ -1,11 +1,16 @@
+#
 # ignore all
 *
 .*
 
+#
 # files
+!.antigenrc
 !.gitignore
 !.zshrc
+!antigen.zsh
 
+#
 # directories
 !custom
 !custom/**/*

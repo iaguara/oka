@@ -1,0 +1,16 @@
+antigen use oh-my-zsh
+
+# omz plugins
+antigen bundle git
+antigen bundle vi-mode
+antigen bundle docker
+
+# another plugins
+antigen bundle $HOME/.oka/zsh/custom
+# antigen bundle soimort/translate-shell # (dockerized)
+# antigen bundle soimort/you-get # (dockerized)
+
+# theme
+antigen theme robbyrussell/oh-my-zsh themes/robbyrussell
+
+antigen apply

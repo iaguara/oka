@@ -116,12 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
-export PINIMA_HOME="$HOME/.pinima"
-[ -s "$PINIMA_HOME/pinima.sh" ] && \. $PINIMA_HOME/pinima.sh
-
-export IA_HOME="$HOME/.iaguara"
-export IA_APPS="$PINIMA_HOME"
-[ -s "$IA_HOME/iaguara.sh" ] && \. $IA_HOME/iaguara.sh
+source "$HOME/.oka/zsh/custom/exports.zsh"
+source "$HOME/.oka/zsh/custom/jenv.zsh"
+source "$HOME/.oka/zsh/custom/iaguara.zsh"

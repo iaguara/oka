@@ -31,6 +31,10 @@ oka_install_omz() {
     ${HOME}/.oh-my-zsh
 }
 
+oka_install_antigen() {
+  curl -L git.io/antigen > ${HOME}/antigen.zsh
+}
+
 oka_install_tpm() {
   git clone \
     --quiet \
@@ -44,7 +48,8 @@ oka_install_tpm() {
 oka_install() {
   oka_clone
   oka_configure_git
-  oka_install_omz
+  # oka_install_omz
+  oka_install_antigen
   oka_install_tpm
 }
 oka_install
