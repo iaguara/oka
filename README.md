@@ -16,7 +16,7 @@ own license, whenever necessary.
 ## Install
 
 ```shell 
-curl -o- https://git.io/fjUqe | sh
+curl -o- https://git.io/fjUwh | sh
 ```
 
 _See [install.sh][install] to more details._
