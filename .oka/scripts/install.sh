@@ -10,6 +10,8 @@ oka_clone() {
   cd $HOME
   git init
   git remote add origin https://github.com/iaguara/oka.git
+  git fetch --all
+  git reset --hard origin/master
   git pull origin master
   cd -
 }
