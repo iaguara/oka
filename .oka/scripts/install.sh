@@ -27,18 +27,8 @@ oka_configure_git() {
 " | tee ${HOME}/.gitconfig
 }
 
-oka_install_omz() {
-  git clone \
-    --quiet \
-    --depth=1 \
-    --single-branch \
-    -b master \
-    https://github.com/robbyrussell/oh-my-zsh.git \
-    ${HOME}/.oh-my-zsh
-}
-
 oka_install_antigen() {
-  curl -L git.io/antigen > ${HOME}/antigen.zsh
+  curl -L git.io/antigen > ${HOME}/.oka/zsh/antigen.zsh
 }
 
 oka_install_tpm() {
@@ -53,9 +43,8 @@ oka_install_tpm() {
 
 oka_install() {
   oka_clone
-  oka_install_fonts
   oka_configure_git
-  # oka_install_omz
+  oka_install_fonts
   oka_install_antigen
   oka_install_tpm
 }
