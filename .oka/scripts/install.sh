@@ -16,6 +16,10 @@ oka_clone() {
   cd -
 }
 
+oka_install_fonts() {
+  sh ./install_fonts.sh "../fonts"
+}
+
 oka_configure_git() {
   printf "\
 [include]\n\
@@ -49,6 +53,7 @@ oka_install_tpm() {
 
 oka_install() {
   oka_clone
+  oka_install_fonts
   oka_configure_git
   # oka_install_omz
   oka_install_antigen
