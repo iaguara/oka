@@ -30,7 +30,7 @@ oka_configure_git() {
 }
 
 oka_install_antigen() {
-  curl -L git.io/antigen > ${HOME}/antigen.zsh
+  curl -L git.io/antigen > ${OKA_DIR}/zsh/antigen.zsh
 }
 
 oka_install_tpm() {
