@@ -6,6 +6,8 @@ set -eu
 
 umask 022
 
+OKA_DIR="${OKA_DIR:-$HOME/.oka}"
+
 oka_clone() {
   cd $HOME
   git init
@@ -17,18 +19,18 @@ oka_clone() {
 }
 
 oka_install_fonts() {
-  sh ./install_fonts.sh "../fonts"
+  sh ${OKA_DIR}/scripts/install_fonts.sh "../fonts"
 }
 
 oka_configure_git() {
   printf "\
 [include]\n\
-  path = ${HOME}/.oka/git/.gitconfig\n\
+  path = ${OKA_DIR}/git/.gitconfig\n\
 " | tee ${HOME}/.gitconfig
 }
 
 oka_install_antigen() {
-  curl -L git.io/antigen > ${HOME}/.oka/zsh/antigen.zsh
+  curl -L git.io/antigen > ${HOME}/antigen.zsh
 }
 
 oka_install_tpm() {
