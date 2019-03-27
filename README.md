@@ -16,10 +16,31 @@ own license, whenever necessary.
 ## Install
 
 ```shell 
-curl -o- https://git.io/fjUwh | sh
+curl -fsSL https://git.io/fjUwh | sh
 ```
 
 _See [install.sh][install] to more details._
 
+
+### Install docker
+
+```shell
+curl -fsSL https://get.docker.com | sudo sh
+```
+
+Ensure that `docker` is managed as a [non-root user][docker-non-root]:
+
+```shell
+sudo groupadd docker
+sudo usermod -aG docker $USER
+```
+
+### Log out and log back in
+
+Log out and log back in so that your configs and group membership is re-evaluated.
+
+
+
 [iaguara]: https://github.com/iaguara
 [install]: ./.oka/scripts/install.sh
+[docker-non-root]: https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user
