@@ -119,7 +119,7 @@
     <property name="single-workspace-number" type="int" value="0"/>
   </property>
   <property name="last" type="empty">
-    <property name="window-width" type="int" value="723"/>
-    <property name="window-height" type="int" value="588"/>
+    <property name="window-width" type="int" value="727"/>
+    <property name="window-height" type="int" value="589"/>
   </property>
 </channel>
