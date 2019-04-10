@@ -13,7 +13,3 @@
 !.oka/**/*
 !.oka/**/.*
 
-!.config/
-!.config/xfce4/
-!.config/xfce4/**/*
-.config/xfce4/desktop
