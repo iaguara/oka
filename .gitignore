@@ -1,7 +1,6 @@
 *
 .*
 
-!.asoundrc
 !.bashrc
 !.gitignore
 !.tmux.conf
